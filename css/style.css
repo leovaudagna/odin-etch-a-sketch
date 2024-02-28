@@ -19,8 +19,10 @@ body {
 }
 
 button {
+    padding: 10px;
     background-color: rgb(248, 255, 254);
     border: 1px solid rgb(224, 224, 224);
+    border-radius: 10px;
 }
 
 #container {
@@ -37,5 +39,5 @@ button {
     background-color: rgb(248, 255, 254);
     flex-grow: 1;
     flex-basis: calc(var(--box-size) / var(--resoultion-number));
-    border: 1px solid rgb(173, 173, 173);
+    border: 0.2px solid rgb(202, 202, 202);
 }
