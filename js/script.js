@@ -23,9 +23,26 @@ resolutionButton.addEventListener('click', function(){
     }    
 });
 
-// box.addEventListener('mouseover', (e)=>{
-//     e.target.style.backgroundColor = 'blue';
-// });
+function randomColor(){
+
+    rgb = "";
+
+    r = Math.floor(Math.random() * 256);
+    g = Math.floor(Math.random() * 256);
+    b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+container.addEventListener('mouseover', function(e){
+    let targetElement = e.target;
+    if(targetElement){
+
+        targetElement.style.backgroundColor = randomColor();
+    }
+}, true);
+
+
 
 //PAGE RENDER
 function cleanContainer(){
@@ -48,13 +65,9 @@ function renderContainer(r){
     
 }
 
-let listBoxes = container.childNodes;
-console.log(listBoxes);
-for(box in listBoxes){
-    box.addEventListener('click', (e)=>{
-        e.target.style.backgroundColor = "red";
-    })
-}
+console.log(randomColor());
+console.log(randomColor());
+console.log(randomColor());
 
 renderContainer(resolution);
 
