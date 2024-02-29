@@ -45,7 +45,6 @@ button {
 #languaje img {
     margin: 80px 40px;
     width: 50px;
-    filter: brightness(0.5);
 }
 
 /* #languaje img:hover {

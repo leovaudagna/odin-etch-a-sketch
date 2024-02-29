@@ -108,13 +108,28 @@ spanishFlag.addEventListener('click', function(){
 })
 
 ukFlag.addEventListener('mouseover', function(e){
-    e.target.style.filter = 'brightness(0.8)';
+    if(lang != 'uk'){
+        e.target.style.filter = 'brightness(0.8)';
+    }    
 })
 
 ukFlag.addEventListener('mouseout', function(e){
-    e.target.style.filter = 'brightness(0.5)';
+    if(lang != 'uk'){
+        e.target.style.filter = 'brightness(0.5)';
+    }
 })
 
+spanishFlag.addEventListener('mouseover', function(e){
+    if(lang != 'es'){
+        e.target.style.filter = 'brightness(0.8)';
+    }    
+})
+
+spanishFlag.addEventListener('mouseout', function(e){
+    if(lang != 'es'){
+        e.target.style.filter = 'brightness(0.5)';
+    }    
+})
 
 
 
