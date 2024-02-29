@@ -1,5 +1,6 @@
 //GLOBAL VARIABLES
 let resolution = 4;
+let brightness = 1;
 
 //DOM Elements
 const container = document.getElementById('container');
@@ -35,11 +36,25 @@ resolutionButton.addEventListener('click', function(){
     } 
 });
 
+
+
 //Change boxes color
 container.addEventListener('mouseover', function(e){
+    
+    // let paintedBox = true;
+
+    let newRandomColor = randomColor();
+
     let targetElement = e.target;
+
     if(targetElement.id == 'box'){
-        targetElement.style.backgroundColor = randomColor();
+        targetElement.style.backgroundColor = newRandomColor;
+        targetElement.style.filter = `brightness(${brightness})`;
+        brightness -= 0.10;
+        brightness = (Math.round(brightness * 100) / 100).toFixed(2)
+        if(brightness == 0){
+            brightness = 1;
+        }      
     }
 }, true);
 
